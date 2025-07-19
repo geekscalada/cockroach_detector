@@ -93,13 +93,13 @@ This directory contains a mock Raspberry Pi sender used for testing the inferenc
 - Intended to simulate how the Raspberry Pi will work in the final setup
 
 ## 📁 Project Structure
-
+```
 watchtower_sender_image/
 ├── capture_images_and_send.py  # Script to send images
 ├── images/                     # Directory with mock images
 ├── Dockerfile                  # Docker container definition
 └── docker-compose.yaml         # For running the sender container
-
+```
 This mock is useful for testing the full flow if you don't have a camera. 
 
 ##  🚀 Eexcution of docker container
