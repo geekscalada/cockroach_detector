@@ -37,7 +37,7 @@ cd roach-detector
 ```bash
 python -m venv venv
 source venv/bin/activate
-pip install fastapi uvicorn torch torchvision pillow python-multipart paho-mqtt
+pip install fastapi uvicorn torch torchvision pillow python-multipart paho-mqtt python-dotenv
 ```
 
 3. Make sure YOLOv5 repo is available locally:
