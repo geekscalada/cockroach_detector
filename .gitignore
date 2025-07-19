@@ -1,0 +1,6 @@
+detections/
+yolov5s.pt
+__pycache__/
+yolov5x.pt
+.env
+**/venv/

@@ -28,16 +28,17 @@ roach-detector/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/youruser/roach-detector.git
+git clone
 cd roach-detector
 ```
 
 2. Set up virtual environment:
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 pip install fastapi uvicorn torch torchvision pillow python-multipart paho-mqtt python-dotenv
+pip install -r requirements.txt
 ```
 
 3. Make sure YOLOv5 repo is available locally:
@@ -46,14 +47,16 @@ pip install fastapi uvicorn torch torchvision pillow python-multipart paho-mqtt 
 git clone https://github.com/ultralytics/yolov5.git
 ```
 
+4. Configure your `.env`. You have an example to do it.
+
 # Start server
 uvicorn app:app --reload
 
 ## Start server running behind the windows (WSL side)
-- uvicorn archivo:app --host 0.0.0.0 --port 8000
+- uvicorn app:app --host 0.0.0.0 --port 8000
 - we need for that NAT + port forwarding
     - powershell -> netsh interface portproxy add v4tov4 listenport=8000 listenaddress=0.0.0.0 connectport=8000 connectaddress=<IP_WSL>  (using eth0 )
-```
+
 
 ## 📡 MQTT Integration (optional)
 
