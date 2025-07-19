@@ -77,4 +77,31 @@ When detection is positive, a JSON message is sent over MQTT:
 - `best.pt` trained model
 - A local system with Home Assistant or similar with an opened MQTT broker to receive the alert. 
 - This alert should be forward to a push notification in your smartphone through HA system.
+- A system like a Raspberry or similar that it should be able to send captured images with a camera.
+- LAN/WAN network 
+
+
+🖼️ watchtower_sender_image
+
+This directory contains a mock Raspberry Pi sender used for testing the inference server.
+
+🔧 What it does
+
+- Watches a local folder for images
+- Picks a random image every few seconds
+- Sends it to the FastAPI server via HTTP POST
+- Intended to simulate how the Raspberry Pi will work in the final setup
+
+## 📁 Project Structure
+
+watchtower_sender_image/
+├── capture_images_and_send.py  # Script to send images
+├── images/                     # Directory with mock images
+├── Dockerfile                  # Docker container definition
+└── docker-compose.yaml         # For running the sender container
+
+This mock is useful for testing the full flow if you don't have a camera. 
+
+##  🚀 Eexcution of docker container
+docker-compose up --build
 

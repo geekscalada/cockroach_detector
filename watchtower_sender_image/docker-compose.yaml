@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  watchtower_sender_image:
+    build: .
+    container_name: watchtower_sender_image
+    volumes:
+      - ./mock_images:/data/mock_images
+    restart: unless-stopped
+    environment:
+      - IP=192.168.XXX.XXX
+      - PORT=8000

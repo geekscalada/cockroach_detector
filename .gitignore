@@ -4,3 +4,4 @@ __pycache__/
 yolov5x.pt
 .env
 **/venv/
+**/mock_images/
