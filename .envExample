@@ -1,0 +1,10 @@
+MODEL_PATH=./best.pt
+
+CONFIDENCE_THRESHOLD=0.40
+
+# Configuración del broker MQTT
+MQTT_BROKER=192.168.XX.XX
+MQTT_PORT=1883
+MQTT_TOPIC=zigbee2mqtt/detect_cockroach
+MQTT_USER=<youUser>
+MQTT_PASS=<youPassword>
